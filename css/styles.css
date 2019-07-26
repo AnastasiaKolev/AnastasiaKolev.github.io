@@ -1,8 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=cyrillic');
-@import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic'); */
-
 body {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Darker Grotesque', sans-serif;
     font-weight: 300;
     margin: 10px 20px auto;
     width: auto;
@@ -20,29 +17,27 @@ h3 {
 
 #main-header {
     border-bottom: 2px solid #000;
-    /*position:absolute;*/
     width: 100%;
     background: rgba(255, 255, 255, .7);
-    /*top:0px;
-    height:80px;*/
+    display: block;
+    position: relative;
 }
 
 .profile-menu {
+    display: block;
     list-style: none;
-    float: right;
-    margin-top: 25px;
-    margin-right: 20px;
+    margin: 0;
 }
 
 .submenu {
     list-style: none;
-    padding: 0px;
+    padding: 0;
     border: 1px solid #aaa;
     background: #fff;
-    margin-top: 25px;
     position: absolute;
-    right: 10px;
     display: none;
+    margin: 0;
+    right: 0;
 }
 
 .submenu a {
@@ -72,4 +67,12 @@ h3 {
 
 footer {
     margin: 10px 0 0 0;
+}
+
+.profile-menu-trigger {
+    display: block;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px 40px;
+    text-decoration: none;
 }

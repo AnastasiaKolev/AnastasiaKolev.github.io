@@ -1,0 +1,33 @@
+.show {
+    z-index: 1000;
+    position: absolute;
+    background-color: #ccc;
+    border: 1px solid #646464;
+    padding: 2px;
+    display: block;
+    margin: 0;
+    list-style-type: none;
+    list-style: none;
+}
+
+.hide {
+    display: none;
+}
+
+.show ul {
+    padding: 5px;
+    margin: 5px;
+}
+
+.show li {
+    list-style: none;
+}
+
+.show a {
+    border: 0 !important;
+    text-decoration: none;
+}
+
+.show a:hover {
+    text-decoration: underline !important;
+}

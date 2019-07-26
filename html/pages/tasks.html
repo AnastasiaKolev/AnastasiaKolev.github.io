@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="This is a perfect tool for building to-do lists" lang="en" name="description">
+  <meta content="online, free, to-do, lists, builder, tool" lang="en" name="keywords">
+  <meta content="Kolev to-do lists and Co" lang="en" name="author">
+  <meta content="width=device-width, initial-scale=1.0" lang="en" name="viewport">
+  <link href="../../css/styles.css" rel="stylesheet" />
+  <link href="../../css/task.css" rel="stylesheet" />
+  <title>To-Do Lists Builder</title>
+  <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
+</head>
+<body>
+<header id="main-header">
+  <h1 id="site-title">
+    To-Do List
+  </h1>
+  <div style="position: relative; float:right">
+    <a class="profile-menu-trigger" data-trigger="dropdown" href="#">
+      Menu
+    </a>
+    <ul class="profile-menu">
+      <li>
+        <ul class="profile-submenu submenu">
+          <li><a href="./main.html">Main</a></li>
+          <li><a href="./video.html">Video</a></li>
+          <li><a href="./withoutContextMenu.html">Without Context Menu</a></li>
+          <li><a href="./customContextMenu.html">Custom Context Menu</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
+<main class="tasks_wrapper">
+  <section class="tasks_list-wrapper -left">
+    <div class="tasks_list-title">
+      <span>Tasks list</span>
+    </div>
+    <div class="tasks_list js-task-list"></div>
+  </section>
+  <section class="tasks_add-wrapper -right">
+    <form action="/action_page.php" method="get" target="_blank">
+      <h4>Add task</h4>
+      <div class="block">
+        <label>
+          Title
+          <input class="task-new-input js-new-task-title" name="task-title" placeholder="Title" required type="text" />
+        </label>
+      </div>
+      <div class="block">
+        <label>
+          Description
+          <textarea class="task-new-textarea js-new-task-text"
+                    name="task-description"
+                    placeholder="Enter the task" required></textarea>
+        </label>
+      </div>
+
+      <div class="block js-change-task-type">
+        <div>Type task</div>
+        <label class="label-column">
+          <input checked name="task-type" type="radio" value="common">
+          Common
+        </label>
+        <label class="label-column">
+          <input name="task-type" type="radio" value="work">
+          Work
+        </label>
+      </div>
+
+      <div class="block js-change-task-send-type">
+        <div>Send type</div>
+        <label class="label-column">
+          <input checked name="task-send-type" type="radio" value="local">
+          Local (save to LocalStorage)
+        </label>
+        <label class="label-column">
+          <input name="task-send-type" type="radio" value="server">
+          Server (imitate send form)
+        </label>
+      </div>
+
+      <div>
+        <h5>Server Options</h5>
+      </div>
+
+      <div class="block">
+        <label>
+          Date
+          <input class="js-change-task-date" name="task-date" required type="date">
+        </label>
+      </div>
+
+      <div class="block">
+        <label>
+          Priority
+          <select class="js-change-task-priority" name="task-priority">
+            <option>None</option>
+            <option>High</option>
+            <option>Normal</option>
+            <option>Low</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="block">
+        <div>Additional</div>
+        <label class="label-column">
+          Mobile Phone
+          <input name="task-send-mobile-phone" pattern="\+[0-9]{11}" placeholder="+79810000000" type="text">
+        </label>
+        <label class="label-column">
+          Index
+          <input name="task-send-index" pattern="[0-9]{6}" placeholder="000000" type="text">
+        </label>
+        <label class="label-column">
+          Tag (text only, without space, 10 symbols)
+          <input name="task-send-tag" pattern="[A-Za-zА-Яa-я]{10}" placeholder="tag" type="text">
+        </label>
+      </div>
+
+
+      <button class="send-button js-add-task" type="submit" value="Submit">Add task</button>
+    </form>
+  </section>
+</main>
+<footer>
+  <span class="center">&copy; 2019</span>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script charset="utf-8" src="../../js/main.js"></script>
+<script charset="utf-8" src="../../js/menu.js"></script>
+
+</body>
+</html>
